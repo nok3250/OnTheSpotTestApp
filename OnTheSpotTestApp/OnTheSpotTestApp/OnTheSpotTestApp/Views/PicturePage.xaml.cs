@@ -2,16 +2,16 @@
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace OnTheSpotTestApp
+namespace OnTheSpotTestApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPage : ContentPage
+    public partial class PicturePage : ContentPage
     {
-        public MainPage()
+        public PicturePage()
         {
             InitializeComponent();
 
-            BindingContext = new MainPageViewModel(this);
+            BindingContext = new PicturePageViewModel();
         }
     }
 }
