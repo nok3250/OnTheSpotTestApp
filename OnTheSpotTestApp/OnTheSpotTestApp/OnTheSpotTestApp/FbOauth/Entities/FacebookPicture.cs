@@ -2,7 +2,6 @@
 
 namespace OnTheSpotTestApp.FbOauth.Entities
 {
-
     internal class FacebookPicture
     {
         [JsonProperty("picture")]

@@ -3,12 +3,9 @@ using OnTheSpotTestApp.FbOauth.Entities;
 using OnTheSpotTestApp.Services;
 using OnTheSpotTestApp.Views;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
-using Xamarin.Auth;
 using Xamarin.Forms;
 
 namespace OnTheSpotTestApp.ViewModels
@@ -50,27 +47,9 @@ namespace OnTheSpotTestApp.ViewModels
             LoginButtonIsVisible = false;
 
             var facebookService = new FacebookService();
-            var email = await facebookService.GetEmailAsync(token.AccessToken);
             var pictureUrl = await facebookService.GetPictureAsync(token.AccessToken);
 
-            var account = new Account(email, new Dictionary<string, string> { { "picture", pictureUrl } });
-
-            var accountStore = AccountStore.Create();
-
-            var accountStored = accountStore.FindAccountsForService(Configuration.AppName).FirstOrDefault();
-            if (accountStored != null)
-            {
-                accountStored = account;
-                accountStore.Save(accountStored, Configuration.AppName);
-            }
-            else
-            {
-                accountStore.Save(account, Configuration.AppName);
-            }
-
-            await Application.Current.MainPage.Navigation.PushAsync(new PicturePage());
-
-            LoginButtonIsVisible = true;
+            await Application.Current.MainPage.Navigation.PushAsync(new PicturePage(pictureUrl));
         }
 
         public async void OnAuthenticationFailed(string message, Exception exception)

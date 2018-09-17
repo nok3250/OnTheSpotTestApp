@@ -1,27 +1,17 @@
 ﻿using System;
-using System.Linq;
-using Xamarin.Auth;
 using Xamarin.Forms;
 
 namespace OnTheSpotTestApp.ViewModels
 {
     internal class PicturePageViewModel
     {
-        private readonly Account _userAccount;
+        private readonly string _pictureUrl;
 
-        public PicturePageViewModel()
+        public PicturePageViewModel(string pictureUrl)
         {
-            var accountStored = AccountStore.Create().FindAccountsForService(Configuration.AppName).FirstOrDefault();
-            if (accountStored != null)
-            {
-                _userAccount = accountStored;
-            }
-            else
-            {
-                throw new AccountStoreException("Stored account is missing");
-            }
+            _pictureUrl = pictureUrl;
         }
 
-        public ImageSource ProfileImageSource => new UriImageSource { Uri = new Uri(_userAccount.Properties["picture"]) };
+        public ImageSource ProfileImageSource => new UriImageSource { Uri = new Uri(_pictureUrl) };
     }
 }

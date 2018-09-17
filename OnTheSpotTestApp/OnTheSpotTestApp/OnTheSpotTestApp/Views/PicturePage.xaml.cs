@@ -7,11 +7,11 @@ namespace OnTheSpotTestApp.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PicturePage : ContentPage
     {
-        public PicturePage()
+        public PicturePage(string pictureUrl)
         {
             InitializeComponent();
 
-            BindingContext = new PicturePageViewModel();
+            BindingContext = new PicturePageViewModel(pictureUrl);
         }
     }
 }
