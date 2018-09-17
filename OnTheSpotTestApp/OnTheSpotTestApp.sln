@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnTheSpotTestApp.Android", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnTheSpotTestApp.iOS", "OnTheSpotTestApp\OnTheSpotTestApp.iOS\OnTheSpotTestApp.iOS.csproj", "{8F35B43F-5B4E-45E4-A508-622863EBA411}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnTheSpotTestApp", "OnTheSpotTestApp\OnTheSpotTestApp\OnTheSpotTestApp.csproj", "{D9CCA7CB-7C59-4AF3-9AB5-C1B0EA96177B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnTheSpotTestApp", "OnTheSpotTestApp\OnTheSpotTestApp\OnTheSpotTestApp.csproj", "{D9CCA7CB-7C59-4AF3-9AB5-C1B0EA96177B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

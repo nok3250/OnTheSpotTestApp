@@ -4,3 +4,6 @@ OnTheSpotTestApp/.vs/
 OnTheSpotTestApp/OnTheSpotTestApp/OnTheSpotTestApp.iOS/obj/
 OnTheSpotTestApp/OnTheSpotTestApp/OnTheSpotTestApp/obj/
 OnTheSpotTestApp/OnTheSpotTestApp/OnTheSpotTestApp/bin/
+OnTheSpotTestApp/packages/
+OnTheSpotTestApp/OnTheSpotTestApp/OnTheSpotTestApp.iOS/bin/iPhoneSimulator/Debug/OnTheSpotTestApp.dll.mdb
+OnTheSpotTestApp/OnTheSpotTestApp/OnTheSpotTestApp.iOS/bin/

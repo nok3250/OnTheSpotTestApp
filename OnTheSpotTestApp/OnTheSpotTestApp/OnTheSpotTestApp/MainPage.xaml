@@ -1,14 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:local="clr-namespace:OnTheSpotTestApp"
-             x:Class="OnTheSpotTestApp.MainPage">
-
+             xmlns:Helpers="clr-namespace:OnTheSpotTestApp.Helpers"
+             x:Class="OnTheSpotTestApp.MainPage"
+             Title="On The Spot test app"
+             BackgroundColor="#d3d3d3">
     <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <Button HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Text="Login with Facebook"
+                BackgroundColor="#3b5998"
+                TextColor="#ffffff"
+                IsVisible="{Binding LoginButtonIsVisible}"
+                Command="{Binding LoginCommand}">
+        </Button>
+        <Label HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                TextColor="#000000"
+                IsVisible="{Binding LoginButtonIsVisible, Converter={Helpers:InverseBoolConverter}}"
+                Text="Loading...">
+        </Label>
     </StackLayout>
 
 </ContentPage>
